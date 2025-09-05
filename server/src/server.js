@@ -8,6 +8,9 @@ const connectDB = require('./configs/db.js');
 // import routers
 const productRoutes = require('./routes/productRoutes.js');
 
+// import middlewares
+const { rateLimiter } = require('./middleware/rateLimiter.js');
+
 // allow .env files
 dotenv.config();
 
@@ -20,6 +23,7 @@ const PORT = process.env.PORT || 5001;
 
 // middleware
 app.use(express.json()); // parse json data (allows server to understand json)
+app.use(rateLimiter); // limit the number of requests
 
 // routes
 app.use("/api/products", productRoutes);
