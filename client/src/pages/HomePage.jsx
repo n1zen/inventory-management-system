@@ -35,8 +35,8 @@ const HomePage = () => {
     <div className='page-container'>
       {loading && <div className='loading-state'>Loading...</div>}
       {products.length > 0 && (
-        products.map((product) => (
-          <ProductCard key={product._id} product={product} setProducts={setProducts} />
+        products.map((product, index) => (
+          <ProductCard key={product._id} product={product} setProducts={setProducts} delay={index * 0.1} />
         ))
       )}
     </div>

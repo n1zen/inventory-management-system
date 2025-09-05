@@ -1,9 +1,14 @@
 import React from 'react'
 import { PenSquareIcon, Trash2Icon } from 'lucide-react'
 
-const ProductCard = ({product, setProducts}) => {
+const ProductCard = ({product, setProducts, delay}) => {
+
+    const cardStyle = {
+        animationDelay: `${delay}s`
+    };
+
   return (
-    <div className="card-container card-shadow">
+    <div className="card-container card-shadow card-popin" style={cardStyle}>
         <div className="card-content">
             <div className="card-title">
                 <h1 className="card-title-text">{product.name}</h1>
