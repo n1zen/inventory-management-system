@@ -1,6 +1,7 @@
 // import packages and libraries
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors');
 
 // import connectDB module
 const connectDB = require('./configs/db.js');
@@ -20,6 +21,11 @@ const app = express();
 // use port on .env
 // if PORT does not exist on .env, use 5001 as port
 const PORT = process.env.PORT || 5001;
+
+// use cors for development
+app.use(cors({
+    origin: 'http://localhost:5173',
+}));
 
 // middleware
 app.use(express.json()); // parse json data (allows server to understand json)
