@@ -1,8 +1,10 @@
 // import dependencies
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router';
 import api from '../lib/axios.js';
 import toast from 'react-hot-toast';
+import { PlusIcon } from 'lucide-react';
 
 // import components
 import ProductCard from '../components/ProductCard.jsx';
@@ -34,14 +36,21 @@ const HomePage = () => {
     };
     fectchProducts();
   }, []);
+
   return (
-    <div className='page-container'>
-      {loading && <div className='loading-state'>Loading...</div>}
-      {products.length > 0 && (
-        products.map((product, index) => (
-          <ProductCard key={product._id} product={product} setProducts={setProducts} delay={index * 0.1} />
-        ))
-      )}
+    <div className="page-container">
+      <Link to="/create-product" className="create-link card-popin">
+        <PlusIcon className="create-link-icon" />
+        <span className="create-link-text">Create Product</span>
+      </Link>
+      <div className='cards-container'>
+        {loading && <div className='loading-state'>Loading...</div>}
+        {products.length > 0 && (
+          products.map((product, index) => (
+            <ProductCard key={product._id} product={product} setProducts={setProducts} delay={index * 0.1} />
+          ))
+        )}
+      </div>
     </div>
   )
 }

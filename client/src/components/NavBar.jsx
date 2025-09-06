@@ -12,7 +12,7 @@ const NavBar = () => {
                     <h1 className="header-title-text title-1">Inventory Management System</h1>
                     <h1 className="header-title-text title-2">IMS</h1>
                 </div>
-                <div className="nav-container">
+                {/* <div className="nav-container">
                     <ul className="nav-list">
                         <li className="nav-item">
                             <Link to="/create-product" className="nav-link">
@@ -21,7 +21,7 @@ const NavBar = () => {
                             </Link>
                         </li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         </header>
     )

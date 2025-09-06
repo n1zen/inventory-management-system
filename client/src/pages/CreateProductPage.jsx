@@ -25,18 +25,24 @@ const CreateProductPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
+    try {
+      
+    } catch (error) {
+      
+    } finally {
 
+    }
   };
 
   
 
 
   return (
-    <div className="page-container">
-      <div className="page-actions">
-        <Link to="/" className="link">
-          <ArrowLeftIcon className="link-icon"/>
-          <span className="link-text">Back to Home</span>
+    <div className="create-page-container card-shadow">
+      <div className="create-page-actions">
+        <Link to="/" className="draw back-link">
+          <ArrowLeftIcon className="back-link-icon"/>
+          <span className="back-link-text">Back to Home</span>
         </Link>
       </div>
       <div className="card-form-container">
@@ -80,6 +86,11 @@ const CreateProductPage = () => {
                 value={stock}
                 onChange={(e) => setStock(e.target.value)}
             />
+          </div>
+          <div className="form-actions">
+            <button type="submit" className="btn-submit" disabled={loading}>
+              {loading ? "Creating...": "Create Product"}
+            </button>
           </div>
         </form>
       </div>
