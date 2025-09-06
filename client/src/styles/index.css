@@ -79,19 +79,6 @@ body {
   min-height: 100vh;
 }
 
-/* NavBar.jsx */
-
-.header-container {
-  background-color: var(--base-200-color);
-  padding: 1rem 8rem;
-  box-shadow: 0 10px 15px -5px var(--primary-color);
-  border-bottom-right-radius: 1.75rem;
-  border-bottom-left-radius: 1.75rem;
-  animation: navbar-slidein 0.5s ease-in-out;
-}
-
-/* NavBar.jsx animations */
-
 /* 
 @media (max-width: 1071px) {
   .nav-link-text {

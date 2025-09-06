@@ -1,5 +1,14 @@
 @import '../index.css';
 
+.header-container {
+    background-color: var(--base-200-color);
+    padding: 1rem 5vw;
+    box-shadow: 0 10px 15px -5px var(--primary-color);
+    border-bottom-right-radius: 1.75rem;
+    border-bottom-left-radius: 1.75rem;
+    animation: navbar-slidein 0.5s ease-in-out;
+}
+
 @keyframes navbar-slidein {
     0% {
         transform: translateY(-100%);
@@ -78,4 +87,19 @@
 .nav-link-text {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
+}
+
+@media (max-width: 1071px) {
+    .nav-link-text {
+        display: none;
+    }
+}
+
+@media (max-width: 723px) {
+    .title-1 {
+        display: none;
+    }
+    .title-2 {
+        display: block;
+    }
 }
