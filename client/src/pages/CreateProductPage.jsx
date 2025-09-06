@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router';
 import { ArrowLeftIcon } from 'lucide-react';
 import toast from 'react-hot-toast';
 
+
 //import axios instance
 import api from '../lib/axios.js';
 
@@ -29,7 +30,12 @@ const CreateProductPage = () => {
 
   return (
     <div className="page-container">
-        <h1>Create Product Page</h1>
+      <div className="page-actions">
+        <Link to="/" className="link">
+          <ArrowLeftIcon className="link-icon"/>
+          <span className="link-text">Back to Home</span>
+        </Link>
+      </div>
     </div>
   )
 }

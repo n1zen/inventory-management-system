@@ -1,0 +1,122 @@
+:root {
+  /* background colors */
+  --base-100-color: oklch(13% 0.028 261.692);
+  --base-200-color: oklch(21% 0.034 264.665);
+  --base-300-color: oklch(27% 0.033 256.848);
+  --base-400-color: oklch(33% 0.032 256.848);
+
+  --primary-color: oklch(57% 0.245 27.325);
+  --secondary-color: oklch(64% 0.222 41.116);
+  --accent-color: oklch(55% 0.288 302.321);
+  --neutral-color: oklch(27% 0.033 256.848);
+  --info-color: oklch(97% 0.013 17.38);
+  --success-color: oklch(77% 0.152 181.912);
+  --warning-color: oklch(85% 0.199 91.936);
+  --error-color: oklch(71% 0.194 13.428);
+
+  /* content colors */
+  --base-content-color: oklch(96% 0.003 264.542);
+  --primary-content-color: oklch(97% 0.014 254.604);
+  --secondary-content-color: oklch(98% 0.016 73.684);
+  --accent-content-color: oklch(97% 0.014 254.604);
+  --neutral-text-color: oklch(98% 0.002 247.839);
+  --info-content-color: oklch(28% 0.091 267.935);
+  --success-content-color: oklch(27% 0.046 192.524);
+  --warning-content-color: oklch(28% 0.066 53.813);
+  --error-content-color: oklch(27% 0.105 12.094);
+
+  /* font sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.5rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 3.5rem;
+  --font-size-6xl: 4rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 5rem;
+  --font-size-9xl: 5.5rem;
+  --font-size-10xl: 6rem;
+
+  /* font weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* font families */
+  --font-family-sans: 'Inter', sans-serif;
+  --font-family-serif: 'Merriweather', serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--base-100-color);
+  color: var(--base-content-color);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+/* App.jsx */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NavBar.jsx */
+
+.header-container {
+  background-color: var(--base-200-color);
+  padding: 1rem 8rem;
+  box-shadow: 0 10px 15px -5px var(--primary-color);
+  border-bottom-right-radius: 1.75rem;
+  border-bottom-left-radius: 1.75rem;
+  animation: navbar-slidein 0.5s ease-in-out;
+}
+
+/* NavBar.jsx animations */
+
+/* 
+@media (max-width: 1071px) {
+  .nav-link-text {
+    display: none;
+  }
+}
+
+@media (max-width: 916px) {
+  .page-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 4rem;
+  }
+
+  .header-container {
+    padding: 1rem 2rem;
+  }
+
+}
+
+@media (max-width: 723px) {
+  .title-1 {
+    display: none;
+  }
+
+  .title-2 {
+    display: block;
+  }
+} */

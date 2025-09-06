@@ -7,6 +7,9 @@ import toast from 'react-hot-toast';
 // import components
 import ProductCard from '../components/ProductCard.jsx';
 
+// import css
+import '../styles/pages/HomePage.css'
+
 const HomePage = () => {
 
   const [products, setProducts] = useState([]);

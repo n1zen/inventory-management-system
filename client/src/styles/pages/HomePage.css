@@ -1,0 +1,13 @@
+@import '../index.css';
+
+.page-container {
+    margin-top: 3.5rem;
+    padding: 1.5rem 16rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.loading-state {
+    text-align: center;
+}
